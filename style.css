@@ -818,9 +818,26 @@ section 3  CHARGE SHORTS
   color: white;
   cursor: pointer;
 }
+.shop-side-card-image-group .heighlight-text{
+  position: relative;
+}
+.shop-side-card-image-group .heighlight-text::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f5f5f3;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 
-
-
+.shop-side-card-image-group .heighlight-text:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 
 
