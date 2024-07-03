@@ -504,12 +504,13 @@ section 3  CHARGE SHORTS
   margin: 0 auto;
 }
 
-.section-tow-top-bar {
+.sticky-top {
   background-color: #000000;
   color: #7c7c7c;
   padding-top: 20px;
   position: sticky;
   top: 0;
+  z-index: 9999;
 }
 
 .detail-top-bar,
