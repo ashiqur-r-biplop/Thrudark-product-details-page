@@ -916,3 +916,7 @@ section 4  UTEXBEL COTTON
 section 4  UTEXBEL COTTON 
 --------------------------
 */
+.detail-top-bar a.active {
+  border-bottom: 2px solid white;
+  color: white;
+}

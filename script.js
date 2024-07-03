@@ -323,7 +323,7 @@ swiperSlides.forEach((slide) => {
   slide.addEventListener("click", function () {
     fullscreenCarouselImgContent.src = carouselImgSrc;
     fullscreenCarousel.style.display = "block";
-    fullscreenCarousel.style.zIndex = "9999999999999"
+    fullscreenCarousel.style.zIndex = "9999999999999";
 
     // Disable scroll on body
     document.body.style.overflow = "hidden";
@@ -336,4 +336,74 @@ fullScreenCarouselCloseBtn.addEventListener("click", function () {
 
   // Enable scroll on body
   document.body.style.overflow = "auto";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.detail-top-bar a');
+  const offset = document.querySelector('.sticky-top').offsetHeight; // Adjust based on your sticky element
+
+  let isScrolling = false;
+
+  function setActiveLink() {
+    if (isScrolling) return;
+
+    let index = sections.length;
+
+    while (--index && window.scrollY + offset < sections[index].offsetTop) {}
+
+    navLinks.forEach((link) => link.classList.remove('active'));
+    if (index >= 0) {
+      const id = sections[index].id;
+      const activeLink = document.querySelector(`.detail-top-bar a[href="#${id}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+  }
+
+  function handleNavLinkClick(event) {
+    navLinks.forEach((link) => link.classList.remove('active'));
+    event.target.classList.add('active');
+
+    isScrolling = true;
+
+    // Scroll to the section smoothly
+    const targetId = event.target.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      window.scrollTo({
+        top: targetSection.offsetTop - offset, // Adjust the offset as needed
+        behavior: 'smooth'
+      });
+    }
+
+    // Prevent default anchor behavior
+    event.preventDefault();
+
+    setTimeout(() => {
+      isScrolling = false;
+    }, 1000); // Timeout duration should match the scroll behavior duration
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', handleNavLinkClick);
+  });
+
+  setActiveLink();
+  window.addEventListener('scroll', setActiveLink);
 });
