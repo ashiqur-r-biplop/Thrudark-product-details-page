@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.container {
+  max-width: 1768px;
+  margin: 0 auto;
+}
+
 .prd-container {
   background: url("./img/Fog_Overlay_1_6_1200x1200.webp") center no-repeat;
   background-size: cover;
@@ -499,7 +504,7 @@ h2 {
 section 3  CHARGE SHORTS 
 --------------------------
 */
-.container {
+.CHARGE_SHORTS {
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -818,10 +823,12 @@ section 3  CHARGE SHORTS
   color: white;
   cursor: pointer;
 }
-.shop-side-card-image-group .heighlight-text{
+
+.shop-side-card-image-group .heighlight-text {
   position: relative;
 }
-.shop-side-card-image-group .heighlight-text::after{
+
+.shop-side-card-image-group .heighlight-text::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -839,11 +846,73 @@ section 3  CHARGE SHORTS
   transform-origin: bottom left;
 }
 
-
-
-
 /* 
 --------------------------
 section 3  CHARGE SHORTS 
+--------------------------
+*/
+/* 
+--------------------------
+section 4  UTEXBEL COTTON 
+--------------------------
+*/
+
+.UTEXBEL_COTTON {
+  background-color: #161616;
+  color: white;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.UTEXBEL_COTTON_CONTAINER {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  width: 100%;
+  height: 80vh;
+}
+
+.UTEXBEL_COTTON_CONTAINER_img_box,
+.UTEXBEL_COTTON_CONTAINER_content_box {
+  width: 50%;
+  height: auto;
+}
+
+.UTEXBEL_COTTON_CONTAINER_img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.UTEXBEL_COTTON_CONTAINER_content_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.UTEXBEL_COTTON_CONTAINER_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+
+}
+
+.UTEXBEL_COTTON_CONTAINER_content span {
+  color: #524d3a;
+  font-size: 14px;
+}
+
+.UTEXBEL_COTTON_CONTAINER_content h2 {
+  font-size: 28px;
+}
+.UTEXBEL_COTTON_CONTAINER_content p {
+  color: #D0D0D0;
+}
+/* 
+--------------------------
+section 4  UTEXBEL COTTON 
 --------------------------
 */

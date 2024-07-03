@@ -323,6 +323,7 @@ swiperSlides.forEach((slide) => {
   slide.addEventListener("click", function () {
     fullscreenCarouselImgContent.src = carouselImgSrc;
     fullscreenCarousel.style.display = "block";
+    fullscreenCarousel.style.zIndex = "9999999999999"
 
     // Disable scroll on body
     document.body.style.overflow = "hidden";
