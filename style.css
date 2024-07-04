@@ -702,9 +702,8 @@ section 3  CHARGE SHORTS
 .product-details-section-three-list-items ul li::after {
   content: "";
   position: absolute;
-  left: -25px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: -20px;
+  top: 9px;
   width: 5px;
   height: 5px;
   background-color: #7B7356;
@@ -979,7 +978,7 @@ section 4  UTEXBEL COTTON
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 15px;
+  gap: 8px;
 
 }
 
@@ -1359,7 +1358,7 @@ section 5  tab section
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 15px;
+    gap: 8px !important;
 
   }
 
@@ -1479,4 +1478,22 @@ section 5  tab section
     padding-left: 20px;
   }
 
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 36px !important;
+  }
+
+  .active-svg {
+    right: 35%;
+  }
+  .product-details-section-three-list-items ul li::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 12px;
+    width: 5px;
+    height: 5px;
+    background-color: #7B7356;
+    clip-path: polygon(0 0, 100% 53%, 100% 53%, 0% 100%);
+  }
 }
