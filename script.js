@@ -458,6 +458,7 @@ sectionTitle.scrollIntoView({ behavior: "smooth" });
 letters.forEach((letter) => {
   letter.classList.remove("ani-Scroll_Letter-animate");
 });
+// animated text
 
 const observer = new IntersectionObserver(
   (entries) => {
