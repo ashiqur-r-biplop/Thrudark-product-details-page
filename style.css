@@ -1294,6 +1294,16 @@ section 5  tab section
   width: 30px;
 }
 
+.button.prd-Wishlist_Button.prd-Wishlist_Button-add.iWishAddColl {
+  white-space: nowrap !important;
+}
+
+.text-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: start !important;
+}
+
 @media screen and (min-width: 0px) and (max-width: 720px) {
   section {
     width: 100% !important;
@@ -1486,6 +1496,7 @@ section 5  tab section
   .active-svg {
     right: 35%;
   }
+
   .product-details-section-three-list-items ul li::after {
     content: "";
     position: absolute;
@@ -1495,5 +1506,72 @@ section 5  tab section
     height: 5px;
     background-color: #7B7356;
     clip-path: polygon(0 0, 100% 53%, 100% 53%, 0% 100%);
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1025px) {
+  .prd-Wishlist_Button {
+    white-space: nowrap !important;
+  }
+
+  .text-paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: end !important;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 48px !important;
+  }
+
+  .active-svg {
+    right: 44%;
+  }
+
+  .third-section {
+    padding: 10px;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .swiper-horizontal {
+    height: 600px !important;
+
+  }
+
+  div#swiper-wrapper-cd3c82384d0b1612 {
+    height: 250px;
+  }
+
+  div#swiper-wrapper-cd3c82384d0b1612 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  .tab-section-bg {
+    background-image: url(./img/mountain-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "TTMussels-Light";
+  }
+
+  .tab-section-container {
+    height: 50vh;
   }
 }
