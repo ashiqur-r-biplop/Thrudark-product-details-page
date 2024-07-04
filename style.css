@@ -5,6 +5,7 @@ html {
 .container {
   max-width: 1768px !important;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -514,6 +515,7 @@ section 3  CHARGE SHORTS
 */
 .CHARGE_SHORTS {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -570,7 +572,6 @@ section 3  CHARGE SHORTS
 }
 
 .product-details-section-three {
-  width: 1240px;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -1218,6 +1219,9 @@ section 5  tab section
 */
 
 @media (max-width: 600px) {
+  section {
+    width: 100% !important;
+  }
 
   table,
   thead,
@@ -1255,5 +1259,92 @@ section 5  tab section
     white-space: nowrap;
     content: attr(data-label);
     font-weight: bold;
+  }
+
+  .product-details-section-three {
+    flex-direction: column;
+  }
+
+  .product-details-section-three-content-box,
+  .product-details-section-three-image-box {
+    width: 100%;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER_img_box,
+  .UTEXBEL_COTTON_CONTAINER_content_box {
+    width: 100%;
+    height: auto;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+
+  }
+
+  .tab-image-container,
+  .tab-content-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .CHARGE_SHORTS {
+    max-width: 1280px !important;
+    width: 100%;
+    margin: 0 0px;
+    padding: 0 10px;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER {
+    padding: 0 10px;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER_img_box {
+    width: 100%;
+    height: 350px;
+  }
+
+  .UTEXBEL_COTTON_CONTAINER_content_box {
+    padding: 40px 10px;
+  }
+
+  .tab-section-container {
+    background-color: #000;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+  }
+  .tab-section-bg {
+    background-image: url(./img/mountain-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "TTMussels-Light";
+    padding: 20px 0px;
   }
 }
