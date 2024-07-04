@@ -35,7 +35,7 @@ h2 {
 
 .primary-btn {
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #7b7356;
   color: white;
   padding: 15px 20px;
@@ -1298,10 +1298,8 @@ section 5  tab section
   white-space: nowrap !important;
 }
 
-.text-paragraph {
-  display: flex;
-  justify-content: center;
-  align-items: start !important;
+.text-paragraph svg {
+  margin-top: 7px;
 }
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
@@ -1573,5 +1571,11 @@ section 5  tab section
 
   .tab-section-container {
     height: 50vh;
+  }
+  .prd-Gallery{
+    width: 100%;
+  }
+  .text-paragraph{
+    width: 80%  !important;
   }
 }
