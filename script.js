@@ -338,24 +338,11 @@ fullScreenCarouselCloseBtn.addEventListener("click", function () {
   document.body.style.overflow = "auto";
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.detail-top-bar a');
-  const offset = document.querySelector('.sticky-top').offsetHeight; // Adjust based on your sticky element
+// scroll and action active tab functionally
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".detail-top-bar a");
+  const offset = document.querySelector(".sticky-top").offsetHeight;
 
   let isScrolling = false;
 
@@ -366,44 +353,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
     while (--index && window.scrollY + offset < sections[index].offsetTop) {}
 
-    navLinks.forEach((link) => link.classList.remove('active'));
+    navLinks.forEach((link) => link.classList.remove("active"));
     if (index >= 0) {
       const id = sections[index].id;
-      const activeLink = document.querySelector(`.detail-top-bar a[href="#${id}"]`);
+      const activeLink = document.querySelector(
+        `.detail-top-bar a[href="#${id}"]`
+      );
       if (activeLink) {
-        activeLink.classList.add('active');
+        activeLink.classList.add("active");
       }
     }
   }
 
   function handleNavLinkClick(event) {
-    navLinks.forEach((link) => link.classList.remove('active'));
-    event.target.classList.add('active');
+    navLinks.forEach((link) => link.classList.remove("active"));
+    event.target.classList.add("active");
 
     isScrolling = true;
 
     // Scroll to the section smoothly
-    const targetId = event.target.getAttribute('href').substring(1);
+    const targetId = event.target.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - offset, // Adjust the offset as needed
-        behavior: 'smooth'
+        top: targetSection.offsetTop - offset,
+        behavior: "smooth",
       });
     }
-
-    // Prevent default anchor behavior
     event.preventDefault();
-
     setTimeout(() => {
       isScrolling = false;
-    }, 1000); // Timeout duration should match the scroll behavior duration
+    }, 1000);
   }
 
   navLinks.forEach((link) => {
-    link.addEventListener('click', handleNavLinkClick);
+    link.addEventListener("click", handleNavLinkClick);
   });
 
   setActiveLink();
-  window.addEventListener('scroll', setActiveLink);
+  window.addEventListener("scroll", setActiveLink);
+});
+
+// tabs
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const tabImages = document.querySelectorAll(".tab-conditional-image");
+  const tabContents = document.querySelectorAll(".tab-conditional-table > div");
+
+  function activateTab(index) {
+    tabs.forEach((tab, i) => {
+      if (i === index) {
+        tab.classList.add("active");
+        tabImages[i].classList.add("active");
+        tabContents[i].classList.add("active");
+      } else {
+        tab.classList.remove("active");
+        tabImages[i].classList.remove("active");
+        tabContents[i].classList.remove("active");
+      }
+    });
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      activateTab(index);
+    });
+  });
+
+  // Set the second tab (index 1) as active by default
+  activateTab(1);
 });
