@@ -1069,7 +1069,7 @@ th {
   border-bottom: 1px solid #202020;
 }
 
-.second-row th  {
+.second-row th {
   font-size: 14px !important;
   font-weight: 400;
 }
@@ -1130,9 +1130,11 @@ th {
   border-bottom: 2px solid #f5f5f3;
   z-index: 99999;
 }
-.tab{
+
+.tab {
   border-bottom: 2px solid transparent;
 }
+
 .tab-conditional-table {
   width: 100%;
   height: 200px;
@@ -1147,10 +1149,12 @@ th {
   width: 70%;
   margin: auto;
 }
-.single-row{
+
+.single-row {
   position: relative;
 }
-.single-row::after{
+
+.single-row::after {
   content: '';
   position: absolute;
   left: -20px;
@@ -1162,7 +1166,8 @@ th {
   clip-path: polygon(0 0, 100% 53%, 100% 53%, 0% 100%);
 
 }
-table span{
+
+table span {
   background-color: white;
   color: #000;
   padding: 1px 5px;
@@ -1170,15 +1175,85 @@ table span{
   font-size: 14px;
   margin-right: 5px;
 }
-#tab-2 thead tr th{
+
+#tab-2 thead tr th {
   color: #7B7356;
 
 }
-.normal-color-table-text{
+
+.normal-color-table-text {
   color: #b6b6b6;
+}
+
+#tab3 {
+  width: 100%;
+}
+
+.tab-3-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.tab-3-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  border-bottom: 1px solid rgba(177, 177, 177, 0.288);
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 13px;
+
+}
+
+.tab-3-left-text-box {
+  width: 20%;
+}
+
+.tab-3-right-text-box {
+  width: 80%;
+  word-spacing: 5px;
+}
+
+.tab-3-right-text-box p {
+  line-height: 20px;
+}
+
+.tab-3-right-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bottom-animation {
+  position: relative;
+  cursor: pointer;
+}
+
+.bottom-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f5f5f3;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.bottom-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 /* 
 --------------------------
 section 5  tab section 
 --------------------------
+*/
+/* 
+
 */
