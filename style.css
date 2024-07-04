@@ -733,6 +733,7 @@ section 3  CHARGE SHORTS
 }
 
 .product-details-site-bar-card::after,
+.product-details-site-bar-card::before,
 .product-details-left-top-border::before,
 .product-details-right-top-border::after,
 .product-details-right-top-border::before,
@@ -1074,46 +1075,6 @@ th {
   font-weight: 400;
 }
 
-@media (max-width: 600px) {
-
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-
-  th {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  tr {
-    margin: 0 0 1rem 0;
-    border: 1px solid #ddd;
-  }
-
-  td {
-    border: none;
-    border-bottom: 1px solid #ddd;
-    position: relative;
-    padding-left: 50%;
-  }
-
-  td:before {
-    position: absolute;
-    top: 0;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    content: attr(data-label);
-    font-weight: bold;
-  }
-}
 
 .tab-conditional-image,
 .tab-conditional-table>div {
@@ -1249,11 +1210,50 @@ table span {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 /* 
 --------------------------
 section 5  tab section 
 --------------------------
 */
-/* 
 
-*/
+@media (max-width: 600px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+    border: 1px solid #ddd;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
