@@ -423,3 +423,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set the second tab (index 1) as active by default
   activateTab(1);
 });
+
