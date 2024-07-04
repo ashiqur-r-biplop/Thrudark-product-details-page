@@ -38,8 +38,8 @@
 
 
   <!-- Product info -->
-  <section id="OVERVIEW">
-    <div class="prd-container">
+  <section id="OVERVIEW" class="">
+    <div class="prd-container ">
       <div class="py-8">
         <div class="container mx-4 md:mx-auto grid gap-4 grid-cols-12 ">
           <product-gallery class="col-span-12 lg:col-span-6 flex">
@@ -197,9 +197,9 @@
 
           </product-gallery>
 
-          <div class="col-span-12 lg:col-span-5 relative ">
+          <div class="col-span-12 lg:col-span-5 ">
             <div class="sidebar-sticky h-[100%] flex justify-center items-center">
-              <div class=" relative">
+              <div class=" relative ">
 
                 <!-- Product details header with add to wishlist button -->
                 <div class="flex justify-between gap-4 mb-[24px]">
@@ -537,11 +537,12 @@
                               <product-fit-guide class="prd-Options_FitGuide text-center">
                                 <button type="button" class="text-white" data-product-fit-guide-el="trigger">
                                   <label class="prd-FitGuide_Label fz-14_24">Fit Guide</label>
-                                  <button class="prd-Options_Button !min-w-[100px] block mt-2 !h-[34px]"> <span
-                                      class="prd-Options_Button-inner">Regular</span></button>
+                                  <a href="#SIZING" class="prd-Options_Button !min-w-[100px] block mt-2 !h-[34px]">
+                                    <span class="prd-Options_Button-inner">Regular</span></a>
                                 </button> </product-fit-guide><product-size-guide
                                 class="prd-Options_SizeGuide-Only prd-Options_SizeGuide">
-                                <button type="button" class="text-white" data-product-size-guide-el="trigger">
+                                <a href="#SIZING" type="button" class="text-white pointer"
+                                  data-product-size-guide-el="trigger">
                                   <label class="prd-SizeGuide_Label fz-14_24">Size Guide</label>
                                   <span class="prd-SizeGuide_Icon"><svg viewBox="0 0 65 20" fill="none"
                                       xmlns="http://www.w3.org/2000/svg">
@@ -551,7 +552,7 @@
                                       <path d="M1 0h63v1H1V0ZM1 0v6H0V1l1-1Z" fill="currentColor"></path>
                                       <path d="M32 0h1v5h-1V0ZM64 0v6h1V1l-1-1Z" fill="currentColor"></path>
                                     </svg></span>
-                                </button>
+                                </a>
                               </product-size-guide>
                             </div>
 
@@ -625,7 +626,7 @@
                       " class="h-10 w-10" loading="lazy" />
 
                   <p class="prd-Details_Generic">
-                    <a href="/" class="text-white ">Duties and taxes paid on all orders</a>
+                    <a href="/" class="text-white bottom-animation">Duties and taxes paid on all orders</a>
                   </p>
                 </div>
               </div>
@@ -658,10 +659,9 @@
                         src="https://cdn.shopify.com/s/files/1/0591/0164/2941/files/3CjJI_kBsahP7QAwb519W525IFbSiiZ2wOXyq5K1q4Y_200x.png?v=1719578042"
                         class="w-4/6 mx-auto" alt="">
                     </figure>
-                    <div class="space-y-2 text-white text-sm">
+                    <div class="space-y-2 text-white text-sm second-">
 
-                      <h2>BLACK MARK T-SHIRT
-                      </h2>
+                      <h2>BLACK MARK T-SHIRT</h2>
                       <p>Size: L</p>
                       <p>Tk 6,200 BDT</p>
                       <div class="flex gap-2 items-center !mt-3">
@@ -995,7 +995,7 @@
     <!-- Slider heading -->
     <div class="text-center max-w-3/6 mx-auto space-y-2  mb-16">
       <p class="text-primary text-sm">A SOURCE OF FEAR</p>
-      <h2 class="text-white font-semibold">BLACK MARK T-SHIRT</h2>
+      <h2 class="text-white font-semibold text-[32px]">BLACK MARK T-SHIRT</h2>
 
     </div>
 
@@ -1264,155 +1264,153 @@
 
   <!-- tab section -->
   <section class="tab-section-bg" id="SIZING">
-    <div class="container">
-      <div class="tab-section-container">
-        <div class="tab-image-container">
-          <div class="tab-conditional-image" id="tab-1-image">
-            <img src="./img/MODEL_SIZE.png" alt="">
-          </div>
-          <div class="tab-conditional-image" id="tab-2-image">
-            <img src="./img/MEASURING_GUIDE.png" alt="">
-          </div>
-          <div class="tab-conditional-image" id="tab-3-image">
-            <img src="./img/FITTING_GUIDE.png" alt="">
-          </div>
+    <div class="tab-section-container">
+      <div class="tab-image-container">
+        <div class="tab-conditional-image" id="tab-1-image">
+          <img src="./img/MODEL_SIZE.png" alt="">
         </div>
-        <div class="tab-content-container">
-          <div class="right-tab-container">
-            <h1>SIZE GUIDE</h1>
-            <div class="tabs">
-              <button class="tab" id="tab-text-1">MODEL SIZE</button>
-              <button class="tab" id="tab-text-2">MEASURING GUIDE</button>
-              <button class="tab" id="tab-text-3">FITTING GUIDE</button>
+        <div class="tab-conditional-image" id="tab-2-image">
+          <img src="./img/MEASURING_GUIDE.png" alt="">
+        </div>
+        <div class="tab-conditional-image" id="tab-3-image">
+          <img src="./img/FITTING_GUIDE.png" alt="">
+        </div>
+      </div>
+      <div class="tab-content-container">
+        <div class="right-tab-container">
+          <h1>SIZE GUIDE</h1>
+          <div class="tabs">
+            <button class="tab" id="tab-text-1">MODEL SIZE</button>
+            <button class="tab" id="tab-text-2">MEASURING GUIDE</button>
+            <button class="tab" id="tab-text-3">FITTING GUIDE</button>
+          </div>
+          <div class="tab-conditional-table">
+            <div id="tab-1">
+              <table border="0">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>HEIGHT</th>
+                    <th>WEIGHT</th>
+                    <th>CHEST</th>
+                    <th>WAIST</th>
+                    <th>SIZE</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="single-row">
+                    <td data-label="WAIST">LOUIS TINSLEY</td>
+                    <td class="normal-color-table-text" data-label="XS">178CM</td>
+                    <td class="normal-color-table-text" data-label="S">83KG</td>
+                    <td class="normal-color-table-text" data-label="M">42"</td>
+                    <td class="normal-color-table-text" data-label="L">31"</td>
+                    <td class="normal-color-table-text" data-label="XL">M</td>
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
-            <div class="tab-conditional-table">
-              <div id="tab-1">
-                <table border="0">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>HEIGHT</th>
-                      <th>WEIGHT</th>
-                      <th>CHEST</th>
-                      <th>WAIST</th>
-                      <th>SIZE</th>
+            <div id="tab-2">
+              <table border="0">
+                <thead>
+                  <tr>
+                    <th>SIZE</th>
+                    <th>XS</th>
+                    <th>S</th>
+                    <th>M</th>
+                    <th>L</th>
+                    <th>XL</th>
+                    <th>XXL</th>
+                    <th>3XL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="WAIST"> <span>A</span> WAIST</td>
+                    <td class="normal-color-table-text" data-label="XS">28-29"</td>
+                    <td class="normal-color-table-text" data-label="S">30-31"</td>
+                    <td class="normal-color-table-text" data-label="M">32-33"</td>
+                    <td class="normal-color-table-text" data-label="L">34-35"</td>
+                    <td class="normal-color-table-text" data-label="XL">36-37"</td>
+                    <td class="normal-color-table-text" data-label="XXL">38-39"</td>
+                    <td class="normal-color-table-text" data-label="3XL">40-41"</td>
+                  </tr>
+                  <tr class="second-row">
+                    <th class="normal-color-table-text" colspan="8"> Measure around where your trouser waistband, or
+                      your belt, would normally sit.
+                    </th>
+                  </tr>
+                  <tr>
+                    <td class="normal-color-table-text" data-label="LEG"><span>B</span> LEG</td>
+                    <td class="normal-color-table-text" data-label="XS">10"</td>
+                    <td class="normal-color-table-text" data-label="S">10"</td>
+                    <td class="normal-color-table-text" data-label="M">10"</td>
+                    <td class="normal-color-table-text" data-label="L">10"</td>
+                    <td class="normal-color-table-text" data-label="XL">10"</td>
+                    <td class="normal-color-table-text" data-label="XXL">10"</td>
+                    <td class="normal-color-table-text" data-label="3XL">10"</td>
+                  </tr>
 
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="single-row">
-                      <td data-label="WAIST">LOUIS TINSLEY</td>
-                      <td class="normal-color-table-text" data-label="XS">178CM</td>
-                      <td class="normal-color-table-text" data-label="S">83KG</td>
-                      <td class="normal-color-table-text" data-label="M">42"</td>
-                      <td class="normal-color-table-text" data-label="L">31"</td>
-                      <td class="normal-color-table-text" data-label="XL">M</td>
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div>
-              <div id="tab-2">
-                <table border="0">
-                  <thead>
-                    <tr>
-                      <th>SIZE</th>
-                      <th>XS</th>
-                      <th>S</th>
-                      <th>M</th>
-                      <th>L</th>
-                      <th>XL</th>
-                      <th>XXL</th>
-                      <th>3XL</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td data-label="WAIST"> <span>A</span> WAIST</td>
-                      <td class="normal-color-table-text" data-label="XS">28-29"</td>
-                      <td class="normal-color-table-text" data-label="S">30-31"</td>
-                      <td class="normal-color-table-text" data-label="M">32-33"</td>
-                      <td class="normal-color-table-text" data-label="L">34-35"</td>
-                      <td class="normal-color-table-text" data-label="XL">36-37"</td>
-                      <td class="normal-color-table-text" data-label="XXL">38-39"</td>
-                      <td class="normal-color-table-text" data-label="3XL">40-41"</td>
-                    </tr>
-                    <tr class="second-row">
-                      <th class="normal-color-table-text" colspan="8"> Measure around where your trouser waistband, or
-                        your belt, would normally sit.
-                      </th>
-                    </tr>
-                    <tr>
-                      <td class="normal-color-table-text" data-label="LEG"><span>B</span> LEG</td>
-                      <td class="normal-color-table-text" data-label="XS">10"</td>
-                      <td class="normal-color-table-text" data-label="S">10"</td>
-                      <td class="normal-color-table-text" data-label="M">10"</td>
-                      <td class="normal-color-table-text" data-label="L">10"</td>
-                      <td class="normal-color-table-text" data-label="XL">10"</td>
-                      <td class="normal-color-table-text" data-label="XXL">10"</td>
-                      <td class="normal-color-table-text" data-label="3XL">10"</td>
-                    </tr>
-
-                  </tbody>
-                </table>
-              </div>
-              <div id="tab-3">
-                <div class="tab-3-container">
-                  <div class="tab-3-text-container">
-                    <div class="tab-3-left-text-box">
-                      <h3>FORM-FITTING</h3>
-                    </div>
-                    <div class="tab-3-right-text-box">
-                      <p class="normal-color-table-text">FITS TIGHT TO THE BODY'S CONTOURS, FOR A COMPRESSED FEEL.</p>
-                      <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
-                          class="bottom_animation">SIEGE BASE LAYER</span>, <span class="bottom-animation">FORCE
-                          VELOCITY
-                          LEGGINGS G2</span>, <span class="bottom-animation">
-                          STEALTH SEAMLESS
-                          BASE LAYER TOP
-                        </span></p>
-                    </div>
+                </tbody>
+              </table>
+            </div>
+            <div id="tab-3">
+              <div class="tab-3-container">
+                <div class="tab-3-text-container">
+                  <div class="tab-3-left-text-box">
+                    <h3>FORM-FITTING</h3>
                   </div>
-                  <div class="tab-3-text-container">
-                    <div class="tab-3-left-text-box">
-                      <h3>ATHLETIC</h3>
-                    </div>
-                    <div class="tab-3-right-text-box">
-                      <p class="normal-color-table-text">
-                        SLIMMER FITTING TECHNICAL WEAR FITS CLOSER TO THE BODY THAN REGULAR FITTING ITEMS BUT IS NOT
-                        SKIN
-                        TIGHT. CONSIDER SIZING UP FOR A MORE REGULAR FIT.</p>
-                      <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
-                          class="bottom-animation">FORCE VELOCITY MOTION T-SHIRT</span>,
-                        CENTURION ALPINE JACKET, <span class="bottom-animation">VELES JACKET</span></p>
-                    </div>
+                  <div class="tab-3-right-text-box">
+                    <p class="normal-color-table-text">FITS TIGHT TO THE BODY'S CONTOURS, FOR A COMPRESSED FEEL.</p>
+                    <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
+                        class="bottom_animation">SIEGE BASE LAYER</span>, <span class="bottom-animation">FORCE
+                        VELOCITY
+                        LEGGINGS G2</span>, <span class="bottom-animation">
+                        STEALTH SEAMLESS
+                        BASE LAYER TOP
+                      </span></p>
                   </div>
-                  <div class="tab-3-text-container">
-                    <div class="tab-3-left-text-box">
-                      <h3>ATHLETIC</h3>
-                    </div>
-                    <div class="tab-3-right-text-box">
-                      <p class="normal-color-table-text">
-                        NOT ATHLETIC, NOT LOOSE-FITTING - BUY YOUR REGULAR SIZE.
-                      </p>
-                      <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
-                          class="bottom-animation">ITHAX JACKET</span>, <span class="bottom-animation">PHALANX
-                          FLEECE</span>, <span class="bottom-animation">INSIGNIA T-SHIRT</span>
-                      </p>
-                    </div>
+                </div>
+                <div class="tab-3-text-container">
+                  <div class="tab-3-left-text-box">
+                    <h3>ATHLETIC</h3>
                   </div>
-                  <div class="tab-3-text-container">
-                    <div class="tab-3-left-text-box">
-                      <h3>ATHLETIC</h3>
-                    </div>
-                    <div class="tab-3-right-text-box">
-                      <p class="normal-color-table-text">
-                        A MORE RELAXED FIT FOR A MORE LIFESTYLE FEEL - CONSIDER SIZING DOWN FOR A MORE REGULAR FIT.
-                      </p>
-                      <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
-                          class="bottom-animation">ENIGMA OVERSIZED TEE</span>, RŌNIN
-                        TANTO FULL ZIP SNOW JACKET, <span class="bottom-animation">HEAVY TWILL OVERSHIRT</span> </p>
-                    </div>
+                  <div class="tab-3-right-text-box">
+                    <p class="normal-color-table-text">
+                      SLIMMER FITTING TECHNICAL WEAR FITS CLOSER TO THE BODY THAN REGULAR FITTING ITEMS BUT IS NOT
+                      SKIN
+                      TIGHT. CONSIDER SIZING UP FOR A MORE REGULAR FIT.</p>
+                    <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
+                        class="bottom-animation">FORCE VELOCITY MOTION T-SHIRT</span>,
+                      CENTURION ALPINE JACKET, <span class="bottom-animation">VELES JACKET</span></p>
+                  </div>
+                </div>
+                <div class="tab-3-text-container">
+                  <div class="tab-3-left-text-box">
+                    <h3>ATHLETIC</h3>
+                  </div>
+                  <div class="tab-3-right-text-box">
+                    <p class="normal-color-table-text">
+                      NOT ATHLETIC, NOT LOOSE-FITTING - BUY YOUR REGULAR SIZE.
+                    </p>
+                    <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
+                        class="bottom-animation">ITHAX JACKET</span>, <span class="bottom-animation">PHALANX
+                        FLEECE</span>, <span class="bottom-animation">INSIGNIA T-SHIRT</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="tab-3-text-container">
+                  <div class="tab-3-left-text-box">
+                    <h3>ATHLETIC</h3>
+                  </div>
+                  <div class="tab-3-right-text-box">
+                    <p class="normal-color-table-text">
+                      A MORE RELAXED FIT FOR A MORE LIFESTYLE FEEL - CONSIDER SIZING DOWN FOR A MORE REGULAR FIT.
+                    </p>
+                    <p><span class="normal-color-table-text">EXAMPLE PRODUCTS:</span> <span
+                        class="bottom-animation">ENIGMA OVERSIZED TEE</span>, RŌNIN
+                      TANTO FULL ZIP SNOW JACKET, <span class="bottom-animation">HEAVY TWILL OVERSHIRT</span> </p>
                   </div>
                 </div>
               </div>

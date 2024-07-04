@@ -423,3 +423,26 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set the second tab (index 1) as active by default
   activateTab(1);
 });
+// Keep track of the previously clicked button
+let previousClickedButton = null;
+
+// Select all the buttons
+const buttons = document.querySelectorAll(".prd-Options_Button");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    if (previousClickedButton) {
+      const previousSpan = previousClickedButton.querySelector(
+        ".prd-Options_Button-inner"
+      );
+      previousSpan.style.backgroundColor = "";
+      previousSpan.style.color = "";
+    }
+
+    const currentSpan = button.querySelector(".prd-Options_Button-inner");
+    currentSpan.style.backgroundColor = "white";
+    currentSpan.style.color = "black";
+
+    previousClickedButton = button;
+  });
+});
