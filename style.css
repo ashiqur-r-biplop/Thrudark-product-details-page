@@ -971,7 +971,6 @@ section 5  tab section
   align-items: center;
   z-index: 99;
   overflow: hidden;
-
 }
 
 .tab-section-container .active {
@@ -1334,17 +1333,31 @@ section 5  tab section
 
   }
   .tab-section-bg {
-    background-image: url(./img/mountain-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "TTMussels-Light";
     padding: 20px 0px;
+  }
+  .tab-section-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    overflow: hidden;
+  }
+  .tab-conditional-table {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tab-conditional-table #tab-1 {
+    width: 70%;
+    margin: auto;
+  }
+  
+  .tab-conditional-table #tab-2 {
+    width: 70%;
+    margin: auto;
   }
 }
