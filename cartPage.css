@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "TTMussels-Light";
+    src: url("./font/TTMussels-Light.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
 .bg_color {
     background-color: #161616;
-    border: 1px solid red;
     height: 100vh;
+    font-family: "TTMussels-Light";
 }
 
 p {
