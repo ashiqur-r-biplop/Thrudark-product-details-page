@@ -1291,6 +1291,9 @@ table span {
 section 5  tab section 
 --------------------------
 */
+#addToCartBtn img {
+  width: 30px;
+}
 
 @media screen and (min-width: 0px) and (max-width: 720px) {
   section {
