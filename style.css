@@ -486,7 +486,6 @@ h2 {
   position: sticky;
   top: 500px !important;
   right: 0;
-  z-index: 999999999999999999999999999999 !important;
 }
 
 
@@ -601,9 +600,8 @@ section 3  CHARGE SHORTS
 .product-details-content-box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
   font-family: "TTMussels-Light";
-
 }
 
 .product-details-section-three-content-box span {
@@ -611,7 +609,7 @@ section 3  CHARGE SHORTS
 }
 
 .product-details-content-box h2 {
-  font-size: 28px;
+  font-size: 32px;
   color: #D0D0D0;
 }
 
@@ -871,6 +869,67 @@ section 3  CHARGE SHORTS
   transform-origin: bottom left;
 }
 
+/* ANIMATED TEXT */
+/* ANIMATED TEXT */
+/* ANIMATED TEXT */
+.ani-Scroll_Letter {
+  opacity: 0;
+}
+
+.ani-Scroll_Letter-animate {
+  opacity: 1;
+  animation: Flicker .3s normal forwards linear;
+  color: #fff;
+}
+
+.sec-DoubleImage_Title {}
+
+@keyframes Flicker {
+  0% {
+    opacity: 0;
+    color: #000000;
+
+  }
+
+  10% {
+    opacity: 1;
+    color: #fff;
+
+  }
+
+  20% {
+    opacity: 0;
+    color: #000000;
+
+  }
+
+  50% {
+    opacity: 1;
+    color: #fff;
+
+  }
+
+  60% {
+    opacity: 0;
+    color: #000000;
+
+  }
+
+  100% {
+    opacity: 1;
+    color: #fff;
+
+  }
+}
+
+/* Additional styles for visibility */
+.sec-DoubleImage_Title {
+  font-size: 48px;
+  line-height: 53px;
+}
+
+/* ANIMATED TEXT */
+/* ANIMATED TEXT */
 /* 
 --------------------------
 section 3  CHARGE SHORTS 
@@ -1222,6 +1281,10 @@ table span {
 .bottom-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.sec-DoubleImage_Title span {
+  font-size: 32px !important;
 }
 
 /* 

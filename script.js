@@ -446,3 +446,40 @@ buttons.forEach((button) => {
     previousClickedButton = button;
   });
 });
+
+// animated textdocument.addEventListener("DOMContentLoaded", function() {
+const sectionTitle = document.querySelector(".sec-DoubleImage_Title");
+const letters = document.querySelectorAll(".ani-Scroll_Letter");
+
+// Scroll to the top of the section
+sectionTitle.scrollIntoView({ behavior: "smooth" });
+
+// Reset animation states on page load
+letters.forEach((letter) => {
+  letter.classList.remove("ani-Scroll_Letter-animate");
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        letters.forEach((letter, index) => {
+          setTimeout(() => {
+            letter.classList.add("ani-Scroll_Letter-animate");
+          }, index * 200); // Delay of 200ms between each letter
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+observer.observe(sectionTitle);
+
+// animated text
+window.onload = function() {
+  document.querySelector('body').scrollIntoView();
+};
