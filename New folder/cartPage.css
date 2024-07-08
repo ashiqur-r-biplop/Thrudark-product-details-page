@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "TTMussels-Light";
+    src: url("./font/TTMussels-Light.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bg_color {
+    background-color: #161616;
+    height: 100vh;
+    font-family: "TTMussels-Light";
+}
+
+p {
+    margin: 0 !important;
+}
+
+.column {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.column h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.column p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.dropdownMenuButton {
+    padding-right: 10px;
+    letter-spacing: 0.2em;
+    line-height: 16px;
+    appearance: none;
+    background: transparent;
+    color: #f4f4f4;
+    background-image: none !important;
+    border: 1px solid #f4f4f4;
+}
+
+.dropdownMenuButton option {
+    color: black;
+}
+
+.dropdownMenuButton select {
+    padding: 10px 15px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+.bg_color {
+    background-color: #161616;
+    padding-top: 50px;
+}
+
+.parent_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 50px;
+}
+
+.column_1 {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.item_container {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgba(244, 244, 244, 0.1);
+}
+
+.dropdown_container {
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.dropdown_container p {
+    padding-left: 25px;
+    font-size: 14px;
+    color: #828282;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.dropdown_container p:hover {
+    color: #f4f4f4;
+}
+
+.column_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #030000;
+    padding: 60px;
+    gap: 30px;
+}
+
+.sub_total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_parent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image svg {
+    width: 50px;
+}
+
+.image_container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cart_tittle {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(244, 244, 244, 0.1);
+    color: #f4f4f4;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.item_image {
+    margin-right: 50px;
+}
+
+.item_image img {
+    width: 140px;
+}
+
+.item_content {
+    width: 70%;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item_content p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.column_2 h2 {
+    padding-top: 25px;
+    font-size: 32px;
+    color: #f4f4f4;
+    font-weight: 300;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(244, 244, 244, 0.1);
+    border-top: 1px solid rgba(244, 244, 244, 0.1);
+}
+
+.card_parent .sub_total p {
+    color: #f4f4f4;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.card_parent .sub_total p span {
+    color: #828282;
+}
+
+.card_parent button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 12px 15px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 0;
+}
+
+.card_parent p {
+    padding-top: 10px;
+    color: #828282;
+}
+
+.need_help p {
+    color: #828282;
+}
+
+.need_help p span {
+    cursor: pointer;
+    border-bottom: 1px solid #828282;
+}
+
+@media only screen and (max-width: 1024px) {
+    .parent_container {
+        max-width: 95%;
+        flex-direction: column;
+    }
+
+    .column_2 {
+        background-color: #161616;
+        padding: 0;
+    }
+
+    .bg_color {
+        padding-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .parent_container {
+        padding: 20px;
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .column_2 {
+        background-color: #161616;
+        padding: 10px;
+    }
+
+    .column_1 {
+        padding: 10px;
+    }
+
+    .bg_color {
+        padding-top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
